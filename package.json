@@ -2,9 +2,9 @@
   "name": "heroku-angular7-template",
   "version": "1.0.0",
   "description": "Angular 7 application template that is deployable to Heroku",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
   "repository": {
     "type": "git",
@@ -16,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/chrisrabe/heroku-angular7-template/issues"
   },
-  "homepage": "https://github.com/chrisrabe/heroku-angular7-template#readme"
+  "homepage": "https://github.com/chrisrabe/heroku-angular7-template#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.5",
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "express-async-handler": "^1.1.4",
+    "morgan": "^1.9.1",
+    "path": "^0.12.7"
+  }
 }

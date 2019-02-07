@@ -1,0 +1,7 @@
+{
+  "name": "Heroku Angular Template",
+  "description": "Barebones of an Heroku application with an Angular front-end",
+  "repository": "",
+  "keywords": ["node", "angular", "heroku", "express"],
+  "image": "heroku/nodejs"
+}
