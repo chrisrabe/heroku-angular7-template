@@ -1,17 +1,23 @@
 {
     "extends": "../tslint.json",
     "rules": {
-        "directive-selector": [
+        "completed-docs": [
             true,
-            "attribute",
-            "app",
-            "camelCase"
+            "functions"
         ],
         "component-selector": [
             true,
             "element",
             "app",
             "kebab-case"
-        ]
+        ],
+        "directive-selector": [
+            true,
+            "attribute",
+            "app",
+            "camelCase"
+        ],
+        "no-redundant-jsdoc": false,
+        "trackBy-function": false
     }
 }
