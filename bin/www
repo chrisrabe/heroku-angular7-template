@@ -62,7 +62,7 @@ const onListening = () => {
 };
 
 // get port from environment or store in express
-const port = normalisePort(process.env.PORT || '3000');
+const port = normalisePort(process.env.PORT || '8080');
 app.set('port', port);
 
 // create HTTP server

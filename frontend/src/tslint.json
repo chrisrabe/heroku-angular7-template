@@ -1,9 +1,11 @@
 {
     "extends": "../tslint.json",
     "rules": {
-        "completed-docs": [
+        "directive-selector": [
             true,
-            "functions"
+            "attribute",
+            "app",
+            "camelCase"
         ],
         "component-selector": [
             true,
@@ -14,7 +16,6 @@
         "directive-selector": [
             true,
             "attribute",
-            "app",
             "camelCase"
         ],
         "no-redundant-jsdoc": false,
