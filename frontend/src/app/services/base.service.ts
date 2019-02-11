@@ -1,19 +1,15 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 import { BaseModel } from '../models/base.model';
 
-@Injectable({
-  providedIn: 'root'
-})
-export class BaseService<T extends BaseModel> {
+export abstract class BaseService<T extends BaseModel> {
 
-  protected readonly modelObj: T;
+  public readonly modelObj: T;
   private apiPath: string;
 
-  constructor(protected httpClient: HttpClient,
+  protected constructor(protected httpClient: HttpClient,
               protected baseUrl: string = environment.BASE_API_URL,
               protected endPoint: string,
               private modelType: new () => T) {
