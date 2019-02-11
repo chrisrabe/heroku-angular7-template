@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {finalize} from "rxjs/operators";
-import {Subscription} from "rxjs";
+import { HttpClient } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { finalize } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +9,11 @@ import {Subscription} from "rxjs";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title: any;
+  public title: any;
 
   private subscription: Subscription;
 
-  constructor (private httpClient: HttpClient) {
+  constructor(private httpClient: HttpClient) {
   }
 
   public ngOnInit(): void {
