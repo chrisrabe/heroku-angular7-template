@@ -4,7 +4,21 @@ const AppError = require('./api.error');
 
 /**
  * Function for validating request parameters and body before executing
- * controller logic.
+ * controller logic. This is used before the asyncHandler call. Used in
+ * conjuction with the api.object.schema module.
+ *
+ * Usage Example:
+ *
+ * const joi = require('api.object.schema');
+ *
+ * router.post('/sample',
+ *      validationMiddleware({
+ *          body: {
+ *              id: joi.objectId().required()
+ *          }
+ *      }),
+ *      asyncHandler( async (req, res ...
+ *
  * @param schema
  * @return {Function}
  */
