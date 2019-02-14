@@ -4,7 +4,7 @@ import { map } from 'rxjs/operators';
 import { environment } from '../../environments/environment';
 import { BaseModel } from '../models/base.model';
 
-export abstract class BaseService<T extends BaseModel> {
+export abstract class DataService<T extends BaseModel> {
 
   public readonly modelObj: T;
   private apiPath: string;
@@ -15,6 +15,15 @@ export abstract class BaseService<T extends BaseModel> {
               private modelType: new () => T) {
     this.modelObj = new this.modelType();
     this.apiPath = `${this.baseUrl}/${this.endPoint}`;
+  }
+
+  /**
+   * Sends a get request to the /list action of the endpoint
+   * and returns an array of modelType.
+   */
+  public getList(): Observable<Array<T>> {
+    return this.httpClient.get(`${this.apiPath}/list`)
+      .pipe(map((json: any) => this.modelObj.fromItemJson(json)));
   }
 
   /**
