@@ -1,4 +1,4 @@
-const { TUTORIALS } = require('./constants');
+const { TUTORIALS } = require('../constants');
 const { TUTORIAL_LINKS } = require('./tutorial.links');
 
 const tutorials = [
