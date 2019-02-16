@@ -10,9 +10,9 @@ export abstract class DataService<T extends BaseModel> {
   private apiPath: string;
 
   protected constructor(protected httpClient: HttpClient,
-              protected baseUrl: string = environment.BASE_API_URL,
-              protected endPoint: string,
-              private modelType: new () => T) {
+                        protected baseUrl: string = environment.BASE_API_URL,
+                        protected endPoint: string,
+                        private modelType: new () => T) {
     this.modelObj = new this.modelType();
     this.apiPath = `${this.baseUrl}/${this.endPoint}`;
   }

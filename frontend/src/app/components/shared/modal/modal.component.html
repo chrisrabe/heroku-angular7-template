@@ -1,0 +1,43 @@
+<ng-template #prompt>
+  <div class="modal-header border-0">
+    <h3 class="modal-title">{{modalOptions.title}}</h3>
+  </div>
+  <div class="modal-body">
+    <ng-container *ngIf="modalOptions.content" [ngTemplateOutlet]="modalOptions.content"></ng-container>
+  </div>
+  <div class="modal-body d-flex horizontal-left spacing">
+    <!-- Submit Button -->
+    <button
+      *ngIf="modalOptions.submitButton"
+      type="button"
+      class="btn"
+      (click)="submitButtonClicked()"
+      [disabled]="isSubmitDisabled"
+      [ngClass]="modalOptions.submitButton.style"
+    >{{modalOptions.submitButton.text || modalText.submit}}</button>
+    <!-- Cancel Button -->
+    <button
+      *ngIf="modalOptions.cancelButton"
+      type="button"
+      class="btn btn-link"
+      (click)="cancelButtonClicked()"
+      [ngClass]="modalOptions.cancelButton.style"
+    >{{modalOptions.cancelButton.text || modalText.cancel}}</button>
+  </div>
+</ng-template>
+
+<ng-template #notification>
+  <div class="modal-header border-0">
+    <h3 class="modal-title">{{modalOptions.title}}</h3>
+  </div>
+  <div class="modal-body">
+    {{modalOptions.message}}
+  </div>
+  <div class="modal-body">
+    <button
+      type="button"
+      class="btn btn-success"
+      (click)="submitButtonClicked()"
+    >{{modalOptions.submitButton.text}}</button>
+  </div>
+</ng-template>

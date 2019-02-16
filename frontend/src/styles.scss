@@ -1,1 +1,69 @@
-/* You can add global styles to this file, and also import other style files */
+// Bootstrap
+@import "variables";
+@import "~bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap-reboot";
+@import "~bootstrap/scss/bootstrap-grid";
+
+.modal {
+  display: flex !important;
+  align-items: center;
+}
+
+.modal-dialog {
+  width: 100%;
+}
+
+.modal-content {
+  width: 100%;
+  padding: 30px;
+  border-radius: $border-radius;
+  border: 0;
+
+  .btn-link {
+    color: $dark-accent;
+    text-decoration: underline;
+  }
+
+  & > * {
+    padding: 0;
+    margin-top: 1rem;
+  }
+
+  & > *:first-child {
+    margin-top: 0;
+  }
+}
+
+.modal-body {
+  max-height: 70vh;
+  overflow-x: hidden;
+
+  @include media-breakpoint-up(md) {
+    &.horizontal-left {
+      justify-content: flex-start;
+    }
+    &.horizontal-center {
+      justify-content: center;
+    }
+    &.horizontal-right {
+      justify-content: flex-end;
+    }
+    &.vertical {
+      flex-direction: column;
+      & > button {
+        margin-bottom: 10px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    &.spacing {
+      & > button {
+        margin-right: 10px;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
