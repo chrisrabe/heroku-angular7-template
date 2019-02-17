@@ -1,6 +1,6 @@
-import {BaseModel} from "./base.model";
-import {FormGroup} from "@angular/forms";
-import {TutorialTypes} from "../_util/constants";
+import { FormGroup } from '@angular/forms';
+import { TutorialTypes } from '../_util/constants';
+import { BaseModel } from './base.model';
 
 export class TutorialModel extends BaseModel {
   public title: string;
@@ -11,15 +11,15 @@ export class TutorialModel extends BaseModel {
     super(props);
   }
 
-  createForm(): FormGroup {
+  public createForm(): FormGroup {
     return undefined;
   }
 
-  fromItemJson(base: any): TutorialModel {
+  public fromItemJson(base: any): TutorialModel {
     return new TutorialModel(base);
   }
 
-  fromListJson(base: any): TutorialModel[] {
+  public fromListJson(base: any): TutorialModel[] {
     return base.tutorials ?
       base.tutorials.map(json => new TutorialModel(json))
       : [];

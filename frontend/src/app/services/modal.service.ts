@@ -29,7 +29,7 @@ export class ModalService {
       options.submitButton = {
         click: () => this.closeModal(),
         text: ModalText.okay
-      }
+      };
     }
     const config = {
       ignoreBackdropClick: true,

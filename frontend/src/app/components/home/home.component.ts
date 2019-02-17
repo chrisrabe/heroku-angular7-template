@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {TutorialService} from "../../services/tutorial.service";
-import {Subscription} from "rxjs";
-import {TutorialModel} from "../../models/tutorial.modal";
-import {finalize} from "rxjs/operators";
+import { Subscription } from 'rxjs';
+import { finalize } from 'rxjs/operators';
+import { TutorialModel } from '../../models/tutorial.modal';
+import { TutorialService } from '../../services/tutorial.service';
 
 @Component({
   selector: 'app-home',

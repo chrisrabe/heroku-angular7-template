@@ -1,8 +1,8 @@
-import {Component, OnDestroy, OnInit, TemplateRef, ViewChild} from '@angular/core';
-import {ModalChangeEvent, ModalService} from "../../../services/modal.service";
-import {BsModalRef, BsModalService} from "ngx-bootstrap";
-import {Subscription} from "rxjs";
-import {ModalText, ModalType} from "../../../_util/constants";
+import { Component, OnDestroy, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap';
+import { Subscription } from 'rxjs';
+import { ModalText, ModalType } from '../../../_util/constants';
+import { ModalChangeEvent, ModalService } from '../../../services/modal.service';
 
 @Component({
   selector: 'app-modal',
