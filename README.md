@@ -9,7 +9,8 @@ of time.
 
 
 This application uses Express and NodeJS as its backend and Angular 7 as the front-end
-framework. It would be very beneficial if you study the structure of the code.
+framework. It would be very beneficial if you study the structure of the code. The deployed
+version of this application looks like [this](https://heroku-angular-template.herokuapp.com).
 
 ## Running the Project
 
