@@ -20,7 +20,7 @@
   border: 0;
 
   .btn-link {
-    color: $dark-accent;
+    color: $dark;
     text-decoration: underline;
   }
 
@@ -71,4 +71,8 @@
 body {
   color: $black;
   font-family: Palatino, sans-serif !important;
+}
+
+.pointer {
+  cursor: pointer;
 }

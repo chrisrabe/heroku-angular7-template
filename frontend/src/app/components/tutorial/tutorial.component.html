@@ -1,0 +1,11 @@
+<div *ngIf="tutorial" class="pointer" (click)="openModal()">
+    <img class="image" [src]="imageUrl">
+</div>
+
+<ng-template #links>
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let link of tutorial.links">
+      <a class="text-primary text-dark" [href]="link.url">{{link.description}}</a>
+    </li>
+  </ul>
+</ng-template>

@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { ModalComponent } from './components/shared/modal/modal.component';
 import { ModalService } from './services/modal.service';
+import { TutorialComponent } from './components/tutorial/tutorial.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ModalComponent,
-    HomeComponent
+    HomeComponent,
+    TutorialComponent
   ],
   imports: [
     BrowserModule,
