@@ -5,6 +5,4 @@ class TutorialLinkModel {
     }
 }
 
-module.exports = {
-    TutorialLinkModel
-};
+module.exports = TutorialLinkModel;

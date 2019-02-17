@@ -1,22 +1,11 @@
 const { TUTORIALS } = require('../constants');
 const { TUTORIAL_LINKS } = require('./tutorial.links');
+const { TutorialModel } = require('../../../models');
 
 const tutorials = [
-    {
-        title: 'Angular Resources',
-        type: TUTORIALS.angular,
-        links: TUTORIAL_LINKS.angular,
-    },
-    {
-        title: 'Heroku Resources',
-        type: TUTORIALS.heroku,
-        links: TUTORIAL_LINKS.heroku,
-    },
-    {
-        title: 'NodeJS Resources',
-        type: TUTORIALS.nodejs,
-        links: TUTORIAL_LINKS.nodejs,
-    }
+    new TutorialModel('Angular Resources', TUTORIALS.angular, TUTORIAL_LINKS.angular),
+    new TutorialModel('Heroku Resources', TUTORIALS.heroku, TUTORIAL_LINKS.heroku),
+    new TutorialModel('NodeJS Resources', TUTORIALS.nodejs, TUTORIAL_LINKS.nodejs),
 ];
 
 module.exports = tutorials;

@@ -2,7 +2,7 @@ import {BaseModel} from "./base.model";
 import {FormGroup} from "@angular/forms";
 import {TutorialTypes} from "../_util/constants";
 
-class TutorialModel extends BaseModel {
+export class TutorialModel extends BaseModel {
   public title: string;
   public type: TutorialTypes;
   public links: TutorialLinkModel[];
@@ -26,7 +26,7 @@ class TutorialModel extends BaseModel {
   }
 }
 
-class TutorialLinkModel {
+export class TutorialLinkModel {
   public description: string;
   public url: string;
 }

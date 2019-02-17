@@ -1,4 +1,4 @@
-const { TutorialLinkModel } = require('../../../models/tutorial.link.model');
+const { TutorialLinkModel } = require('../../../models');
 
 const tutorialLinks = {
     angular: [

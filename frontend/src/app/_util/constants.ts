@@ -37,3 +37,15 @@ export enum TutorialTypes {
   heroku = 'heroku',
   nodejs = 'nodejs',
 }
+
+// === [API Enums] ===
+
+enum Endpoints {
+  tutorials = 'tutorials',
+}
+
+// === [Overall] ===
+
+export class Constants {
+  public static END_POINT = Endpoints;
+}

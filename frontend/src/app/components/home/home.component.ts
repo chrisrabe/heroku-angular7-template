@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {ModalService} from "../../services/modal.service";
+import {TutorialService} from "../../services/tutorial.service";
+import {Subscription} from "rxjs";
+import {TutorialModel} from "../../models/tutorial.modal";
+import {finalize} from "rxjs/operators";
 
 @Component({
   selector: 'app-home',
@@ -8,9 +11,18 @@ import {ModalService} from "../../services/modal.service";
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private modalService: ModalService) { }
+  public tutorials: TutorialModel[];
+
+  private listSubscription: Subscription;
+
+  constructor(private tutorialService: TutorialService) { }
 
   public ngOnInit() {
+    this.listSubscription = this.tutorialService.postList({})
+      .pipe(finalize(() => this.listSubscription.unsubscribe()))
+      .subscribe(tutorials => {
+        this.tutorials = tutorials;
+      });
   }
 
 }
