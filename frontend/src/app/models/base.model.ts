@@ -14,7 +14,7 @@ export abstract class BaseModel {
    * Converts the array inside the base object into an array of the model
    * @param base
    */
-  public abstract fromListJson(base: any): Array<any>;
+  public abstract fromListJson(base: any): any[];
 
   /**
    * Converts the base object into a model object

@@ -29,3 +29,11 @@ export enum ModalText {
   submit = 'Submit',
   okay = 'Okay',
 }
+
+// === [Modal Enums] ===
+
+export enum TutorialTypes {
+  angular = 'angular',
+  heroku = 'heroku',
+  nodejs = 'nodejs',
+}
